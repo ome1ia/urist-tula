@@ -1,0 +1,144 @@
+.portfolio_title {
+	@extend %title;
+	margin: 66px auto 20px;
+	text-align: center;
+	font-size: 25px;
+	font-weight: normal;
+	font-family: 'Times New Roman', serif;
+}
+
+.portfolio_slider {
+	@media all and (max-width: 1159px) {
+		width: 654px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media all and (max-width: 895px) {
+		width: 436px;
+	}
+}
+
+	.portfolio_slide {
+		position: relative;
+		width: 217px;
+		height: 272px;
+		
+		&.slick-active {
+			margin-left: -1px;
+			.portfolio_slide_front,
+			.portfolio_slide_back {
+				border: 1px solid $blue_fon;
+			}
+		}
+		&.slick-current {
+			margin-left: 0px;
+		}
+	}
+		.card {
+			width: 217px;
+			height: 252px;
+		}
+			.portfolio_slide_front {
+				position: absolute;
+				top: 20px;
+				left: 0;
+				z-index: 2;
+				width: 184px;
+				height: 122px;
+				margin: 0;
+				padding: 36px 16px 72px;
+				text-align: center;
+				color: #303030;
+				background: $white;
+				p {
+					margin: 0;
+					padding: 0;
+					color: #303030;
+					font: 19px 'Times New Roman', serif;
+					line-height: 1em;
+				}
+				.portfolio_slide_button-blue {
+					@extend %button;
+					display: block;
+					position: absolute;
+					bottom: 29px;
+					left: 50%;
+					margin-left: -57px;
+					width: 95px;
+					color: $white;
+					font-size: 13px;
+					&:hover {
+						opacity: 0.8;
+					}
+				}
+			}	
+			.portfolio_slide_back {
+				@extend .portfolio_slide_front;
+				z-index: 1;
+				background: #a4a5a5 url('../img/portfolio_fon.png') 50%50% no-repeat;
+				p {
+					color: $white;
+				}
+				.portfolio_slide_button-white {
+					@extend %button;
+					display: block;
+					position: absolute;
+					bottom: 29px;
+					left: 50%;
+					margin-left: -57px;
+					width: 95px;
+					font-size: 13px;
+					background: $white;
+					background: rgba(255,255,255,0.8);
+					color: #303030;
+					&:hover {
+						background: $white;
+						opacity: 1;
+					}
+				}
+			}
+
+.js.preserve3d.csstransforms3d {
+	.portfolio_slide {
+		transform-style: flat;
+		transform-style: preserve-3d;
+		perspective: 2000px;
+		perspective-origin: center bottom;
+		&:hover {
+		    .portfolio_slide_front {
+		    	transform: perspective(2000px) rotateY(180deg);
+		    }
+		    .portfolio_slide_back {
+		    	transform: perspective(2000px) rotateY(0deg);
+		    	-ms-backface-visibility: visible;
+		    }
+		}
+	}
+		.card {
+			transform-style: preserve-3d;
+		}
+			.portfolio_slide_front {
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+
+				transition: 0.6s;
+				transform-style: flat;
+				transform-style: preserve-3d;
+			}	
+			.portfolio_slide_back {
+				transform: rotateY(180deg);
+			}	
+}
+
+.no-js, .no-preserve3d, .no-csstransforms3d {
+	.portfolio_slide {
+		&:hover {
+		    .portfolio_slide_front {
+		    	@extend .portfolio_slide_back;
+		    	.portfolio_slide_button-blue {
+		    		@extend .portfolio_slide_button-white;
+		    	}
+		    }
+		}
+	}
+}

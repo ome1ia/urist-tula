@@ -1,0 +1,50 @@
+@mixin transition($prop, $duration: 0.3s, $delay: 0.001s, $function: ease-in){
+    -webkit-transition: $prop $duration $delay $function;
+    -moz-transition: $prop $duration $delay $function;
+    -o-transition: $prop $duration $delay $function;
+    transition: $prop $duration $delay $function;
+}
+
+.container {
+	display: block;
+	margin: 0 auto;
+	max-width: $maxwidth;
+	min-width: $minwidth;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+%title {
+	margin: 0;
+	padding: 0;
+	font: 30px 'PT Serif', serif;
+	font-weight: normal;
+	color: $blue_text;
+	text-transform: uppercase;
+}
+
+%button {
+	box-sizing: content-box;
+	padding: 14px 10px;
+	text-align: center;
+	height: 16px;
+	line-height: 16px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	color: $white;
+	font: 16px 'Times New Roman', serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: $light_blue;
+	@include transition(background);
+	&:hover {
+		background: $blue_fon;
+	}
+}
+

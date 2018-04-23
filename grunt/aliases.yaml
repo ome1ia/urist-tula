@@ -1,0 +1,35 @@
+default:
+  description: 'Default (production) build'
+  tasks:
+    - dev
+clear:
+  description: 'Clean'
+  tasks:
+    - 'clean:all'
+css:
+  description: 'Development build - css'
+  tasks:
+    - 'clean:css'
+    - 'sass:dev'
+    - 'sass:prod'
+js:
+  description: 'Development build - js'
+  tasks:
+    - 'clean:js'
+    - 'uglify'
+img:
+  description: 'Development build - image tasks'
+  tasks:
+    - 'imagemin'
+dev:
+  description: 'Development build and image tasks'
+  tasks:
+    - clear
+    - js
+    - css
+    - img
+prod:
+  description: 'Production build'
+  tasks:
+    - 'concurrent:prodFirst'
+    - 'concurrent:prodSecond'

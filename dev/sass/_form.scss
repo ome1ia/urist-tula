@@ -1,0 +1,49 @@
+.mainPageForm {
+	height: 534px;
+	background: #f4f8fd url(../img/form_fon.png) 0 0 no-repeat;
+	overflow: hidden;
+}
+	.mainPageForm_title {
+		@extend %title;
+		margin: 40px auto 72px;
+		text-align: center;
+	}
+	.mainPageForm_fields {
+		float: right;
+		padding-right: 64px;
+		text-align: right;
+		label {
+			display: block;
+			text-align: right;
+			padding-bottom: 14px;
+			font-size: 15px;
+			color: #626262;
+			vertical-align: top;
+		}
+			span {
+				display: inline-block;
+				vertical-align: top;
+				padding-top: 10px;
+				line-height: 20px;
+			}
+			input, textarea {
+				width: 354px;
+				padding: 11px 14px;
+				border: 1px solid #a1a1a1;
+				line-height: 20px;
+				text-align: left;
+			}
+			input {
+				height: 20px;
+			}
+			textarea {
+				height: 135px;
+			}
+			button {
+				@extend %button;
+				display: inline-block;
+				margin-right: 104px;
+				margin-top: 16px;
+				width: 155px;
+			}
+	}

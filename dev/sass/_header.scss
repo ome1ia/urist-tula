@@ -1,0 +1,50 @@
+.header {
+	display: block;
+	position: relative;
+	z-index: 200;
+	height: 67px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: $white;
+}
+	.header_phones {
+		float: right;
+		width: 195px;
+		padding-top: 14px;
+		padding-left: 30px;
+		font-style: normal;
+		text-align: right;
+		line-height: 24px;
+		a {
+			text-decoration: none;
+			font-size: 22px;
+			line-height: 24px;
+			font-weight: bold;
+			color: $blue_text;
+		}
+	}
+	.header_address {
+		@extend .header_phones;
+		width: 290px;
+		padding-left: 10px;
+		font-size: 16px;
+		font-weight: bold;
+		line-height: 24px;
+		a {
+			text-decoration: none;
+			font-size: 14px;
+			line-height: 24px;
+			font-weight: normal;
+			color: $light_blue;
+			text-decoration: underline;
+		}
+	}
+	.header_logo {
+		display: block;
+		width: 263px;
+		height: 67px;
+		text-decoration: none;
+		img {
+			border: none;
+		}
+	}

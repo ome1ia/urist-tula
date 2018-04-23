@@ -1,0 +1,54 @@
+.benefits {
+	
+}
+	.benefits_title {
+		@extend %title;
+		font-size: 25px;
+		margin: 66px auto 56px;
+		text-align: center;
+	}
+	.benefits_list {
+		margin: 0 auto 70px;
+		padding: 0;
+		max-width: 980px;
+		list-style: none;
+		text-align: center;
+		vertical-align: top;
+		li {
+			display: inline-block;
+			vertical-align: top;
+			margin: 0 0 22px;
+			width: auto;
+			text-align: center;
+			background-image: url(../img/sprite-3.png);
+			background-repeat: no-repeat;
+		}
+	}
+		.benefits_list_guarantee {
+			width: 120px;
+			padding: 106px 25px 0px;
+			text-align: center;
+			font: 19px 'PT Serif', serif; 
+			font-weight: bold;
+			color: #303030;
+			background-position: 50% 0;
+			@media all and (max-width: 970px) {
+				padding: 106px 7px 0px;
+			}
+		}
+		.benefits_list_experience {
+			@extend .benefits_list_guarantee;
+			background-position: 50% -166px;
+		}
+		.benefits_list_fast {
+			@extend .benefits_list_guarantee;
+			background-position: 50% -332px;
+		}
+		.benefits_list_free {
+			@extend .benefits_list_guarantee;
+			background-position: 50% -498px;
+		}
+		.benefits_list_instalment {
+			@extend .benefits_list_guarantee;
+			background-position: 50% -664px;
+		}
