@@ -1,7 +1,10 @@
-.breadcrumbs {
+.breadcrumbs,
+.B_crumbBox {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	color: #8e8e8e;
+	font-size: 12px;
 	li {
 		margin: 0;
 		display: inline-block;
@@ -9,7 +12,9 @@
 		font-size: 12px;
 	}
 }
-	.breadcrumbs_link {
+	.breadcrumbs_link,
+	.B_crumb,
+	.B_firstCrumb {
 		color: #8e8e8e;
 		a {
 			color: #8e8e8e;
@@ -18,10 +23,10 @@
 				text-decoration: underline;
 			}
 		}
-		&:after {
-			content: ">";
-			display: inline-block;
-			padding: 0 7px;
-			color: #8e8e8e;
+	}
+	.B_lastCrumb {
+		a {
+			text-decoration: none;
+			color: #00b0f5;
 		}
 	}
