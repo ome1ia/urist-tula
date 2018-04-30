@@ -1281,11 +1281,20 @@ h1 {
   text-align: right; }
   .mainPageForm_fields label {
     display: block;
+    position: relative;
     text-align: right;
     padding-bottom: 14px;
     font-size: 15px;
     color: #626262;
     vertical-align: top; }
+    .mainPageForm_fields label .error {
+      position: absolute;
+      display: block;
+      top: 0;
+      margin-top: -12px;
+      right: 325px;
+      font-size: 0.8em;
+      color: red; }
   .mainPageForm_fields span {
     display: inline-block;
     vertical-align: top;
@@ -1306,6 +1315,33 @@ h1 {
     margin-right: 104px;
     margin-top: 16px;
     width: 155px; }
+
+.popup_fon {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); }
+
+.popup {
+  position: fixed;
+  z-index: 1001;
+  top: 180px;
+  left: 50%;
+  margin-left: -230px;
+  width: 400px;
+  padding: 30px;
+  background: #ffffff url(../img/cross.png) 434px 10px no-repeat;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.3em;
+  font-size: 15px; }
+  .popup .error {
+    color: red; }
+  .popup .success {
+    color: green; }
 
 .workplan {
   text-align: center; }

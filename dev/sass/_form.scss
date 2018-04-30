@@ -14,11 +14,21 @@
 		text-align: right;
 		label {
 			display: block;
+			position: relative;
 			text-align: right;
 			padding-bottom: 14px;
 			font-size: 15px;
 			color: #626262;
 			vertical-align: top;
+			.error {
+				position: absolute;
+				display: block;
+				top: 0;
+				margin-top: -12px;
+				right: 325px;
+				font-size: 0.8em;
+				color: red;
+			}
 		}
 			span {
 				display: inline-block;

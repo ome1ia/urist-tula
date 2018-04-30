@@ -421,7 +421,7 @@
   	</div>
 
 	<div class="container">
-	  	<form action="/" method="post" class="mainPageForm">
+	  	<form action="/" method="post" class="mainPageForm" id="contactForm">
 	  		<h2 class="mainPageForm_title">Получить консультацию</h2>
 
 	  		<div class="mainPageForm_fields">
@@ -441,6 +441,12 @@
 	  		</div>
 	  	</form>
 	</div>
+
+	<div class="popup_fon" id="popupfon"></div>
+	<div class="popup" id="popup">
+  		<div class="success">Ваш вопрос отправлен!<br>Спасибо за обращение
+ 		</div>
+  	</div>
 
   	<section class="container workplan">
   		<h2 class="workplan_title">Схема работы</h2>
@@ -530,6 +536,19 @@
 						      }
 						    }
 						  ]
+	      	});
+
+	      	//popups
+	      	$('#popupfon, #popup').on('click', function() {
+	      		$('#popupfon').remove();
+	      		$('#popup').remove();
+	      	});
+
+	      	//form error 
+	      	$('#contactForm input, #contactForm textarea').on('input', function() {
+	      		if($(this).next('.error').text()) {
+	      			$(this).next('.error').empty();
+	      		}
 	      	});
 	    });
 	</script>

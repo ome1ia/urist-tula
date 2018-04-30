@@ -471,26 +471,35 @@
   	</div>
 
 	<div class="container">
-	  	<form action="/" method="post" class="mainPageForm">
+	  	<form action="/" method="post" class="mainPageForm" id="contactForm">
 	  		<h2 class="mainPageForm_title">Получить консультацию</h2>
 
 	  		<div class="mainPageForm_fields">
 	  			<label for="name">
 	  				<span>Имя</span>
 	  				<input type="text" name="name" value="" id="name" required />
+	  				<span class="error">Ошибка</span>
 	  			</label>
 	  			<label for="phone">
 	  				<span>E-mail или телефон</span>
 	  				<input type="text" name="phone" value="" id="phone" required />
+	  				<span class="error">Ошибка</span>
 	  			</label>
 	  			<label for="message">
 	  				<span>Ваш вопрос</span>
 	  				<textarea name="message" id="message" required></textarea>
+	  				<span class="error">Ошибка</span>
 	  			</label>
 	  			<button type="submit" class="mainPageForm_button">отправить</button>
 	  		</div>
 	  	</form>
 	</div>
+
+	<div class="popup_fon" id="popupfon"></div>
+	<div class="popup" id="popup">
+  		<div class="error">Произошла ошибка при попытке отправить почту. Ошибка соединения с SMTP-сервером https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+ 		</div>
+  	</div>
 
   	<section class="container workplan">
   		<h2 class="workplan_title">Схема работы</h2>
@@ -580,6 +589,19 @@
 						      }
 						    }
 						  ]
+	      	});
+
+	      	//popups
+	      	$('#popupfon, #popup').on('click', function() {
+	      		$('#popupfon').remove();
+	      		$('#popup').remove();
+	      	});
+
+	      	//form error 
+	      	$('#contactForm input, #contactForm textarea').on('input', function() {
+	      		if($(this).next('.error').text()) {
+	      			$(this).next('.error').empty();
+	      		}
 	      	});
 	    });
 	</script>

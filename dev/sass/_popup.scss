@@ -1,0 +1,29 @@
+.popup_fon {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.3);
+}
+.popup {
+	position: fixed;
+	z-index: 1001;
+	top: 180px;
+	left: 50%;
+	margin-left: -230px;
+	width: 400px;
+	padding: 30px;
+	background: $white url(../img/cross.png) 434px 10px no-repeat;
+	cursor: pointer;
+	text-align: center;
+	line-height: 1.3em;
+	font-size: 15px;
+	.error {
+		color: red;
+	}
+	.success {
+		color: green;
+	}
+}
