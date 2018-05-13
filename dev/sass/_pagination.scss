@@ -1,0 +1,41 @@
+.article {
+	.pagination {
+		list-style: none;
+		li {
+			display: inline-block;
+			margin: 0 1px;
+			padding: 0;
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			text-align: center;
+			font-style: normal;
+			&:before {
+				content: '';
+				display: none;
+			}
+		}
+			a {
+				display: inline-block;
+				border-radius: 50%;
+				font-size: 15px;
+				line-height: 25px;
+				height: 25px;
+				width: 25px;
+				text-decoration: none;
+				&:hover {
+					background: lighten($blue_text, 50%);
+				}
+			}
+			span {
+				display: inline-block;
+				font-size: 15px;
+				line-height: 25px;
+				height: 25px;
+				width: 25px;
+				border-radius: 50%;
+				color: $white;
+				background: $blue_text;
+			}
+	}	
+}

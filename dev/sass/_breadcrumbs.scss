@@ -1,5 +1,4 @@
-.breadcrumbs,
-.B_crumbBox {
+.breadcrumbs {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -12,9 +11,7 @@
 		font-size: 12px;
 	}
 }
-	.breadcrumbs_link,
-	.B_crumb,
-	.B_firstCrumb {
+	.breadcrumbs_link {
 		color: #8e8e8e;
 		a {
 			color: #8e8e8e;
@@ -23,10 +20,11 @@
 				text-decoration: underline;
 			}
 		}
-	}
-	.B_lastCrumb {
-		a {
-			text-decoration: none;
-			color: #00b0f5;
+		&:after {
+			content: '>';
+			display: inline-block;
+			padding: 0 7px;
+			color: #8e8e8e;
 		}
+		
 	}
