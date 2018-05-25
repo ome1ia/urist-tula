@@ -24,11 +24,12 @@ module.exports = {
     // Производственные задачи
     prodFirst: [
         'clean:all',
+        'sass',
         'imagemin'//,
 //        'jshint'
     ],
     prodSecond: [
-        'sass:prod',
+        'cssmin',
         'uglify'//,
 //        'imagemin'
     ],

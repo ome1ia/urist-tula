@@ -10,8 +10,8 @@ css:
   description: 'Development build - css'
   tasks:
     - 'clean:css'
-    - 'sass:dev'
-    - 'sass:prod'
+    - 'sass'
+    - 'cssmin'
 js:
   description: 'Development build - js'
   tasks:

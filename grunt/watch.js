@@ -22,8 +22,8 @@ module.exports = {
         ],
         tasks: [
             'clean:css',
-            'sass:dev',
-            'sass:prod'
+            'sass',
+            'cssmin'
         ]
     },
 };

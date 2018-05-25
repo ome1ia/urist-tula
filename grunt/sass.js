@@ -1,6 +1,6 @@
 module.exports = {
     // Development settings
-    dev: {
+    all: {
         options: {
             style: 'nested'
         },
@@ -10,19 +10,6 @@ module.exports = {
             src: ['**/*.scss', '*.scss'],
             dest: 'src/css',
             ext: '.css'
-        }]
-    },
-    // Production settings
-    prod: {
-        options: {
-            style: 'compressed'
-        },
-        files: [{
-            expand: true,
-            cwd: 'dev/sass',
-            src: ['**/*.scss', '*.scss'],
-            dest: 'src/css',
-            ext: '.min.css'
         }]
     }
 };
