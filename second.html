@@ -301,42 +301,16 @@
       </article>
 
 	  		<!--Portfolio-->
-	  		<h3 class="portfolio_title">Наши работы</h3>
+	  		<h3 class="portfolio_title-decorated">Наши работы</h3>
 	  		<div class="portfolio_slider">
 	  			<div class="portfolio_slide">
 	  				<div class="card">
-	  				<div class="portfolio_slide_front">
-	  					<p>1.Выделение доли в доме и узаконивание самовольных построек</p>
-	  				<a href="/" class="portfolio_slide_button-blue">Подробнее</a>
-					</div>
-					<div class="portfolio_slide_back">
-						<p>1.Выделение доли в доме и узаконивание самовольных построек</p>
-	  					<a href="/" class="portfolio_slide_button-white">Подробнее</a>
-					</div>
-					</div>
-	  			</div>
-	  			<div class="portfolio_slide">
-	  				<div class="card">
-	  				<div class="portfolio_slide_front">
-	  					<p>2.Выделение доли в доме и узаконивание самовольных построек</p>
-	  					<a href="/" class="portfolio_slide_button-blue">Подробнее</a>
-					</div>
-					<div class="portfolio_slide_back">
-						<p>2.Выделение доли в доме и узаконивание самовольных построек</p>
-	  					<a href="/" class="portfolio_slide_button-white">Подробнее</a>
-					</div>
-					</div>
-	  			</div>
-	  			<div class="portfolio_slide">
-	  				<div class="card">
-	  				<div class="portfolio_slide_front">
-	  					<p>3.Выделение доли в доме и узаконивание самовольных построек</p>
-	  				<a href="/" class="portfolio_slide_button-blue">Подробнее</a>
-					</div>
-					<div class="portfolio_slide_back">
-						<p>3.Выделение доли в доме и узаконивание самовольных построек</p>
-	  					<a href="/" class="portfolio_slide_button-white">Подробнее</a>
-					</div>
+		  				<div class="portfolio_slide_front" style="background-image: url(src/img/portfolio_fon.png);">
+
+						</div>
+						<div class="portfolio_slide_back" style="background-image: url(src/img/portfolio_fon.png);">
+		  					<a href="src/img/portfolio_fon.png" class="portfolio_slide_button-white lightbox">Увеличить</a>
+						</div>
 					</div>
 	  			</div>
 	  		</div><!--End portfolio-->
@@ -540,6 +514,7 @@
 
 
   	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  	<script src="src/js/nivo-lightbox.min.js"></script>
   	<script src="src/js/slick.min.js"></script>
 	<script>
 		$(document).on('ready', function() {
@@ -572,6 +547,11 @@
 						    }
 						  ]
 	      	});
+
+	      	//lightbox
+	      	$(document).ready(function(){ 
+			    $('.lightbox').nivoLightbox(); 
+			});
 
 	      	//popups
 	      	$('#popupfon, #popup').on('click', function() {

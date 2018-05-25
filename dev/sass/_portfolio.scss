@@ -1,10 +1,15 @@
-.portfolio_title {
+.portfolio_title,
+.portfolio_title-decorated {
 	@extend %title;
-	margin: 66px auto 20px;
+	margin: 36px auto 20px;
+	padding-top: 30px;
 	text-align: center;
 	font-size: 25px;
 	font-weight: normal;
 	font-family: 'Times New Roman', serif;
+}
+.portfolio_title-decorated {
+	border-top: 1px solid lighten(#656565, 50%);
 }
 
 .portfolio_slider {
@@ -49,7 +54,9 @@
 				padding: 36px 16px 72px;
 				text-align: center;
 				color: #303030;
-				background: $white;
+				background-color: $white;
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
 				p {
 					margin: 0;
 					padding: 0;
@@ -75,7 +82,18 @@
 			.portfolio_slide_back {
 				@extend .portfolio_slide_front;
 				z-index: 1;
-				background: #a4a5a5 url('../img/portfolio_fon.png') 50%50% no-repeat;
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					z-index: -1;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					background: #000;
+					opacity: 0.3;
+				}
 				p {
 					color: $white;
 				}
@@ -91,6 +109,10 @@
 					background: $white;
 					background: rgba(255,255,255,0.8);
 					color: #303030;
+					&.lightbox {
+						bottom: 50%;
+						margin-bottom: -22px;
+					}
 					&:hover {
 						background: $white;
 						opacity: 1;

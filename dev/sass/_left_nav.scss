@@ -2,6 +2,10 @@
 	display: block;
 	width: 22%;
 	margin-right: 78%;
+	margin-top: -13px;
+	&.no-tags {
+		padding-top: 17px;
+	}
 }
 
 @import 'tags';
