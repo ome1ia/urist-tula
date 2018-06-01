@@ -5,6 +5,9 @@
 	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
 	box-shadow: 0 1px 1px 0 rgba(0,0,0,0.5);
 }
+	.hideMenu {
+		display: none;
+	}
 	.topnav_list {
 		list-style: none;
 		margin: 0;
@@ -20,7 +23,21 @@
     		margin: 0;
     		height: 48px;
 			line-height: 48px;
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				z-index: 100;
+				right: 0;
+				top: 5px;
+				bottom: 5px;
+				width: 1px;
+				background: $white;
+			}
 		}
+			.toggle-submenu {
+				display: none;
+			}
 			.topnav_list_link {
 				display: block;
 				position: relative;
@@ -35,16 +52,7 @@
 				text-align: center;
 				background: $blue_fon;
 //				@include transition(background);
-				&:after {
-					content: '';
-					display: block;
-					position: absolute;
-					right: 0;
-					top: 5px;
-					bottom: 5px;
-					width: 1px;
-					background: $white;
-				}
+				
 				&:hover {
 					background: #eee;
 					color: $text;
@@ -75,10 +83,13 @@
 				color: $text;
 			}
 		}
-		.last-link {
+		.socnet-link {
 			float: right;
 			padding-right: 20px;
 			text-align: right;
+			&:after {
+				display: none;
+			}
 		}
 			.topnav_vk {
 				display: inline-block;
@@ -91,9 +102,7 @@
 				line-height: 0;
 				background: url(../img/sprite-1.png) -10px -50px no-repeat;
 				@include transition(opacity);
-				&:after {
-					display: none;
-				}
+				
 				&:hover {
 					background: url(../img/vk.png) 50% 50% no-repeat;
 					opacity: 0.8;
@@ -149,4 +158,177 @@
 			color: $white;
 		}
 	}
+}
+
+@media all and ($tablet) {
+/*	.topnav_list {
+		display: table;
+		& > li {
+			display: table-cell;
+			float: none;
+		}
+			.topnav_list_link {
+				font-size: 16px;
+			}
+		.last-link {
+			.topnav_list_link {
+				&:after {
+					display: none;
+				}
+			}
+		}
+		.socnet-link {
+			display: none;
+		}
+	}
+*/
+
+	.topnav {
+		display: none;
+		 
+	}
+	.topnav-open {
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		padding: 0;
+		.topnav {
+			display: block;
+			padding-top: 48px;
+			background-color: $blue_fon;
+		}
+			.hideMenu {
+				display: block;
+				width: 48px;
+				height: 48px;
+				box-sizing: content-box;
+				padding: 0;
+				margin: 0;
+				position: absolute;
+				top: 0;
+				right: 0;
+				background-color: $blue_fon;
+				cursor: pointer;
+				border: none;
+				outline: none;
+
+				overflow: hidden;
+				text-indent: 150%;
+
+				&:after, &:before {
+					content: '';
+					position: absolute;
+					left: 50%;
+					margin-left: -40%;
+					width: 80%;
+					top: 50%;
+					margin-top: -1px;
+					height: 2px;
+					background: $white;
+				}
+				&:after {
+					transform: rotate(45deg);
+				}
+				&:before {
+					transform: rotate(-45deg);
+				}		
+			}
+			.topnav_list {
+				li {
+					float: none;
+					width: 100%;
+					height: auto;
+					margin: 0;
+					padding-left: 0;
+					padding-right: 0;
+					&:after {
+						height: 1px;
+						width: 100%;
+						top: auto;
+						bottom: 0;
+						left: 0;
+						right: 0;
+					}
+					&:hover {
+						.topnav_list_link {
+							background: $blue-fon;
+							color: $white;
+						}
+					}
+				}
+				.topnav_active:hover {
+					.topnav_list_link {
+						background: $light-blue;
+						color: $white;
+					}
+				}
+					.topnav_list_link {
+						padding-left: 20px;
+						padding-right: 20px;
+						text-align: left;
+						height: 48px;
+					}
+				.last-link {
+					&:after {
+						display: none;
+					}
+				}
+				.socnet-link {
+					display: none;
+				}
+			}
+
+				.toggle-submenu {
+					display: block;
+					position: absolute;
+					z-index: 110;
+					top: 6px;
+					right: 15px;
+					height: 36px;
+					width: 36px;
+					box-sizing: content-box;
+					padding: 0;
+					margin: 0;
+					border-radius: 50%;
+					background: lighten($blue_fon, 5%) url(../img/mobile_icons.png) 50% 10px no-repeat;
+					background-size: 20px;
+					border: none;
+					cursor: pointer;
+					outline: none;
+
+					overflow: hidden;
+					text-indent: 150%;
+					line-height: 0;
+				}
+
+				.topnav_submenu {
+					width: 100%;
+					position: relative;
+					top: 0;
+					border-top: 1px solid $white;
+					border-bottom: 1px solid $white;
+					&:hover {
+						display: none;
+					}
+					a {
+						padding-left: 20px;
+						padding-right: 20px;
+					}
+				}
+			.topnav_list_item:hover {
+				.topnav_submenu {
+					display: none;
+				}
+			}
+			.submenu-open, .submenu-open:hover {
+				.toggle-submenu {
+					transform: rotate(180deg);
+				}
+				.topnav_submenu, .topnav_submenu:hover {
+					display: block;
+				}
+			}
+	}
+
 }

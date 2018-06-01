@@ -48,3 +48,66 @@
 			border: none;
 		}
 	}
+
+	.showMenu {
+		display: none;
+	}
+
+@media all and ($tablet) {
+		.header_logo {
+			width: 230px;
+		}
+
+		.header_phones {
+			width: 170px;
+			padding-left: 10px;
+			a {
+				font-size: 18px;
+			}
+		}
+
+		.header_address {
+			width: 250px;
+			font-size: 14px;
+			a {
+			font-size: 16px;
+			}
+		}
+
+		.showMenu {
+			display: block;
+			padding: 0;
+			box-sizing: content-box;
+			width: 36px;
+			height: 20px;
+			float: right;
+			margin-left: 20px;
+			margin-top: 22px;
+			overflow: hidden;
+			text-indent: 150%;
+			line-height: 0;
+			border: none;
+			background: transparent;
+			outline: none;
+			cursor: pointer;
+			position: relative;
+
+			border-top: 4px solid $blue_text;
+			border-bottom: 4px solid $blue_text;
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				width: 100%;
+				top: 8px;
+				height: 4px;
+				background: $blue_text;
+			}
+		}
+}
+
+@media all and ($mobile) {
+	.header_phones, .header_address {
+		display: none;
+	}
+}

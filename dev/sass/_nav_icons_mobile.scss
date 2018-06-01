@@ -1,0 +1,51 @@
+.icon-top {
+	@extend %icon-top;
+	bottom: 30px;
+	background-position: 50% 10px;
+	transform: rotate(180deg);
+}
+
+.icon-mail {
+	@extend %icon-top;
+	background-position: 50% -72px;
+	bottom: 86px;
+}
+
+.icon-phone {
+	@extend %icon-top;
+	background-position: 50% -112px;
+	bottom: 142px;
+}
+
+.phones-fon {
+	display: none;
+}
+.phones.popup {
+	top: 20px;
+	display: none;
+	text-align: center;
+	h4 {
+		@extend %title;
+		font-size: 24px;
+	}
+	ul {
+		margin: 30px auto 0;
+		padding: 0;
+		width: 200px;
+		list-style: none;
+	}
+	li {
+		padding: 0;
+		margin: 0 auto 23px;
+		width: 200px;
+		font-size: 15px;
+		line-height: 1.3em;
+		color: #626262;
+		position: relative;
+		text-align: center;
+		a {
+			color: #626262;
+			font-size: 18px;
+		}
+	}
+}

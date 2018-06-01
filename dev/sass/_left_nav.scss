@@ -11,3 +11,55 @@
 @import 'tags';
 @import 'news';
 @import 'opinions';
+
+@media all and ($mobile) {
+	.leftnav {
+		width: 100%;
+		margin-right: 0;
+		margin-top: 0;
+		&.no-tags {
+			padding-top: 0;
+		}
+	}
+}
+
+//for mobile arrows
+.icon-toggle {
+	display: none;
+}
+@media all and ($mobile) {
+	.icon-toggle {
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			margin-top: -10px;
+			right: 0;
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-size: 20px auto;
+			background-image: url(../img/mobile_icons.png);
+			background-position: 100% -200px;
+			background-repeat: no-repeat;
+		}
+		&.active {
+			&:after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	.content-toggle {
+		display: none;
+		&.active {
+			display: block;
+		}
+	}
+}

@@ -37,3 +37,18 @@
 			}
 		}
 	}
+
+
+@media all and ($tablet) {
+	.tags_title {
+		padding-left: 10px;
+		padding-right: 3px;
+		font-size: 17px;
+	}
+	.tags_list {
+		a {
+			padding-left: 30px;
+			background-position: 3px -692px
+		}
+	}
+}

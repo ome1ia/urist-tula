@@ -3,6 +3,7 @@
 }
 	.news_title {
 		@extend %title;
+		position: relative;
 		margin: 32px 0 10px;
 		padding: 0 0 10px;
 		border-bottom: 1px solid $blue_text;

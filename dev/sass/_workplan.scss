@@ -68,3 +68,34 @@
 			padding: 0;
 			background-position: -480px 0;
 		}
+
+@media all and ($mobile) {
+	.workplan_list {
+		li {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			padding-bottom: 14px;
+		}
+		.workplan_listArrow {
+			height: 51px;
+			position: relative;
+			background: none;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 51px;
+				height: 51px;
+				background: url(../img/sprite-2.png) -480px 50% no-repeat;
+				-webkit-transform: rotate(90deg);
+				-moz-transform: rotate(90deg);
+				-ms-transform: rotate(90deg);
+				-o-transform: rotate(90deg);
+				transform: rotate(90deg);
+			}
+		}
+	}
+}

@@ -32,3 +32,16 @@
 		}
 		
 	}
+
+@media all and ($mobile) {
+	.breadcrumbs {
+		position: relative;
+		height: auto;
+		padding-top: 8px;
+		top: 0;
+		overflow: visible;
+		li {
+			padding-top: 8px;
+		}
+	}
+}

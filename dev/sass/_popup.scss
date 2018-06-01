@@ -27,3 +27,14 @@
 		color: green;
 	}
 }
+
+@media all and ($mobile) {
+	.popup {
+		width: 260px;
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-left: -150px;
+		background-position: 274px 10px;
+		overflow-x: hidden;
+	}
+}

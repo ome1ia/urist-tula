@@ -124,3 +124,28 @@
 				opacity: 0.8;
 			}
 		}
+
+@media all and ($mobile) {
+	.footer {
+		height: auto;
+		padding: 0;
+	}
+		.footer_blocks {
+			padding-top: 6px;
+			padding-bottom: 6px;
+			&:after {
+				display: none;
+			}
+			li {
+				display: block;
+				padding: 6px;
+				text-align: center;
+			}
+				.footer_logo {
+					display: inline-block;
+					width: 197px;
+					height: 50px;
+					background-size: 197px;
+				}
+		}
+}

@@ -10,10 +10,9 @@
 .articlefilters_list-1 {
 	margin: 0 0 20px;
 	padding: 0;
-	list-style: none;
 	text-align: center;
 	overflow: hidden;
-	li {
+	&_item {
 		float: left;
 		margin: 0 0 10px;
 		width: 25%;
@@ -23,7 +22,6 @@
 		a {
 			display: block;
 			padding: 0;
-			height: 254px;
 			text-decoration: none;
 			color: $text;
 			font: 19px 'Times New Roman', serif;
@@ -37,6 +35,12 @@
 				max-width: 179px;
 				height: auto;
 				margin-bottom: 16px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			span {
+				display: block;
+				height: 56px;
 			}
 		}
 }
@@ -70,13 +74,13 @@
 	height: 320px;
 	padding-top: 18px;
 	background: url('../img/filters2.png') 50% 50% no-repeat;
-	ul {
+	&_list {
 		margin: 0;
 		padding: 0;
 		list-style: none;
 		overflow: hidden;
 	}
-		li {
+		&_item {
 			position: relative;
 			margin: 0;
 			padding: 68px 0 0;
@@ -103,6 +107,7 @@
 			}
 		}
 			a {
+				padding: 0 2px;
 				color: $white;
 				font: 19px 'Times New Roman', serif;
 				line-height: 19.5px;
@@ -146,3 +151,30 @@
 		background-color: $white;
 		opacity: 0.5;
 	}
+
+@media all and ($tablet) {
+	.articlefilters_list-1 {
+		&_item {
+			min-width: 100px;
+		}
+		a {
+			height: 240px;
+		}
+	}
+
+	.articlefilters_list-2 {
+		&_item, a {
+			font-size: 16px;
+		}
+	}
+}
+
+@media all and (max-width: 600px) {
+	.articlefilters_list-2 {
+		height: auto;
+	}
+		.articlefilters_line-v1,
+		.articlefilters_line-g {
+			display: none;
+		}
+}

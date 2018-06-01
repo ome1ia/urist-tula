@@ -43,7 +43,9 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-	<header class="header container">
+	<header class="header container" id="top">
+		<button class="showMenu" id="showMenu">Меню</button>
+
 		<address class="header_phones">
 			<a href="tel:+74872583801">+7 (4872) 58-38-01</a><br />
 			<a href="tel:+79534238190">+7 (953) 423-81-90</a>
@@ -55,18 +57,21 @@
 		</address>
 
 		<a href="/" class="header_logo">
-			<img src="src/img/logo-top.png" alt="Гарантия" style="width: 263px; height: 67px;" />
+			<img src="src/img/logo-top.png" alt="Гарантия" style="width: 100%; height: auto;" />
 		</a>
 	</header>
 
-	<div class="container ">
+	<div class="container">
 		<nav class="topnav">
+			<button class="hideMenu" id="hideMenu">Меню</button>
+
 			<ul class="topnav_list">
 				<li class="topnav_list_item">
 					<a href="/" class="topnav_list_link">Компания</a>
 				</li>
 				<li class="topnav_list_item topnav-withSubmenu">
 					<a href="/" class="topnav_list_link">Частным лицам</a>
+					<button class="toggle-submenu">^</button>
 					<ul class="topnav_submenu">
 						<li>
 							<a href="/">Наследство</a>
@@ -133,10 +138,10 @@
 				<li class="topnav_list_item topnav_active">
 					<a href="/" class="topnav_list_link">Оформление недвижимости</a>
 				</li>
-				<li class="topnav_list_item">
+				<li class="topnav_list_item last-link">
 					<a href="/" class="topnav_list_link">Контакты</a>
 				</li>
-				<li class="topnav_list_item last-link">
+				<li class="topnav_list_item socnet-link">
 					<a href="/" class="topnav_vk">VK</a>
 				</li>
 			</ul>
@@ -180,44 +185,41 @@
 	  		<div class="articlefilters">
 	  			<h2 class="articlefilters_title">По типу имущества</h2>
 
-	  			<ul class="articlefilters_list-1">
-	  				<li>
+	  			<div class="articlefilters_list-1">
+	  				<div class="articlefilters_list-1_item">
 	  					
-	  					<a href="/"><img src="src/img/content/legacy/1.png" alt=""> Дом</a>
-	  				</li>
-	  				<li>
+	  					<a href="/"><img src="src/img/content/legacy/1.png" alt=""> <span>Дом</span></a>
+	  				</div>
+	  				<div class="articlefilters_list-1_item">
 	  					
-	  					<a href="/"><img src="src/img/content/legacy/2.png" alt=""> Квартира</a>
-	  				</li>
-	  				<li>
+	  					<a href="/"><img src="src/img/content/legacy/2.png" alt=""> <span>Квартира</span></a>
+	  				</div>
+	  				<div class="articlefilters_list-1_item"><a href="/"><img src="src/img/content/legacy/3.png" alt=""> <span>Земля</span></a></div>
+	  				<div class="articlefilters_list-1_item">
 	  					
-	  					<a href="/"><img src="src/img/content/legacy/3.png" alt=""> Земля</a>
-	  				</li>
-	  				<li>
+	  					<a href="/"><img src="src/img/content/legacy/4.png" alt=""> <span>Гараж</span></a>
+	  				</div>
+	  				<div class="articlefilters_list-1_item">
 	  					
-	  					<a href="/"><img src="src/img/content/legacy/4.png" alt=""> Гараж</a>
-	  				</li>
-	  				<li>
+	  					<a href="/"><img src="src/img/content/legacy/5.png" alt=""> <span>Ювелирные изделия</span></a>
+	  				</div>
+	  				<div class="articlefilters_list-1_item">
 	  					
-	  					<a href="/"><img src="src/img/content/legacy/5.png" alt=""> Ювелирные изделия</a>
-	  				</li>
-	  				<li>
-	  					
-	  					<a href="/"><img src="src/img/content/legacy/6.png" alt=""> Автомобиль</a>
-	  				</li>
-	  				<li>
+	  					<a href="/"><img src="src/img/content/legacy/6.png" alt=""> <span>Автомобиль</span></a>
+	  				</div>
+	  				<div class="articlefilters_list-1_item">
 	  					<a href="/">
-	  						<img src="src/img/content/legacy/7.png" alt=""><br />
-	  						Вклады, акции<br /> и ценные бумаги
+	  						<img src="src/img/content/legacy/7.png" alt="">
+	  						<span>Вклады, акции<br /> и ценные бумаги</span>
 	  					</a>
-	  				</li>
-	  				<li>
+	  				</div>
+	  				<div class="articlefilters_list-1_item">
 	  					<a href="/">
-		  					<img src="src/img/content/legacy/8.png" alt=""><br />
-		  					Долги
+		  					<img src="src/img/content/legacy/8.png" alt="">
+		  					<span>Долги</span>
 		  				</a>
-	  				</li>
-	  			</ul>
+	  				</div>
+	  			</div>
 
 	  		</div><!--End filters - first block-->
 
@@ -226,38 +228,38 @@
 	  			<h2 class="articlefilters_title">По виду ситуации</h2>
 
 	  			<div class="articlefilters_list-2">
-	  				<ul>
-	  					<li>
+	  				<div class="articlefilters_list-2_list">
+	  					<div class="articlefilters_list-2_item">
 	  						<a href="/">Завещание</a>
-	  					</li>
-	  					<li>
+	  					</div>
+	  					<div class="articlefilters_list-2_item">
 	  						<a href="/">Порядок<br /> оформления<br /> наследства</a>
-	  					</li>
-	  					<li>
+	  					</div>
+	  					<div class="articlefilters_list-2_item">
 	  						<a href="/">Обязательная<br /> доля</a>
-	  					</li>
-	  					<li>
+	  					</div>
+	  					<div class="articlefilters_list-2_item">
 	  						<a href="/">Наследство<br /> по закону</a>
-	  					</li>
-	  					<li>
-	  						<a href="/">Наследственная<br /> масса</a>
-	  					</li>
-	  					<li>
+	  					</div>
+	  					<div class="articlefilters_list-2_item">
+	  						<a href="/">Наследствен&shy;ная<br /> масса</a>
+	  					</div>
+	  					<div class="articlefilters_list-2_item">
 	  						<a href="/">Пропуск срока<br /> вступления<br /> в наследство</a>
-	  					</li>
-	  					<li>
+	  					</div>
+	  					<div class="articlefilters_list-2_item">
 	  						<a href="/">Оформление<br /> наследства<br /> через нотариуса</a>
-	  					</li>
-	  					<li>
+	  					</div>
+	  					<div class="articlefilters_list-2_item">
 	  						<a href="/">Оформление<br /> наследства</a>
-	  					</li>
-	  					<li>
+	  					</div>
+	  					<div class="articlefilters_list-2_item">
 	  						<a href="/">Раздел<br /> наследства</a>
-	  					</li>
-	  					<li>
+	  					</div>
+	  					<div class="articlefilters_list-2_item">
 	  						<a href="/">Особенности<br /> вступления<br /> в наследство<br /> жилья</a>
-	  					</li>
-	  				</ul>
+	  					</div>
+	  				</div>
 
 	  				<div class="articlefilters_line-v1"></div>
 	  				<div class="articlefilters_line-v2"></div>
@@ -372,8 +374,8 @@
 
   		<aside class="leftnav no-tags">
 	  		<div class="news">
-	  			<h2 class="news_title">Новости</h2>
-	  			<ul class="news_list">
+	  			<h2 class="news_title">Новости <i class="icon-toggle active"></i></h2>
+	  			<ul class="news_list content-toggle active">
 	  				<li>
 	  					<div class="news_list_date">02.02.2018</div>
 	  					<p class="news_list_title"><a href="/">С 1 января 2018 года совершение нотариальных действий должно соответствовать регламенту</a></p>
@@ -396,8 +398,8 @@
 	  		</div>
 
 	  		<div class="opinions">
-	  			<h2 class="opinions_title">Отзывы</h2>
-	  			<ul class="opinions_list">
+	  			<h2 class="opinions_title">Отзывы <i class="icon-toggle hidden"></i></h2>
+	  			<ul class="opinions_list  content-toggle hidden">
 	  				<li>
 	  					<a href="/" class="opinion">
 	  						<span class="opinion_date">05.01.2018</span>
@@ -421,9 +423,9 @@
 
 	<div class="container">
 	  	<form action="/" method="post" class="mainPageForm" id="contactForm">
-	  		<h2 class="mainPageForm_title">Получить консультацию</h2>
+	  		<h2 class="mainPageForm_title">Получить консультацию <i class="icon-toggle"></i></h2>
 
-	  		<div class="mainPageForm_fields">
+	  		<div class="mainPageForm_fields content-toggle hidden">
 	  			<label for="name">
 	  				<span>Имя</span>
 	  				<input type="text" name="name" value="" id="name" required />
@@ -439,6 +441,15 @@
 	  				<textarea name="message" id="message" required></textarea>
 	  				<span class="error">Ошибка</span>
 	  			</label>
+
+<!--recapcha-->
+<div class="recaptcha">
+  		    <div class="g-recaptcha" data-sitekey="6LfKDlwUAAAAAEzvPN91R0F0HbonRGo3ZBcwJnka"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LfKDlwUAAAAAEzvPN91R0F0HbonRGo3ZBcwJnka&amp;co=aHR0cDovLzQ1LjMyLjE1OS4xMTg6ODE.&amp;hl=ru&amp;v=v1526884278587&amp;size=normal&amp;cb=c8cxzvopmwid" width="304" height="78" role="presentation" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=ru"></script>
+            <span class="error">Error</span>
+  		</div>
+<!--/recapcha-->
+
 	  			<button type="submit" class="mainPageForm_button">отправить</button>
 	  		</div>
 	  	</form>
@@ -471,13 +482,13 @@
   	<section class="container benefits">
   		<h2 class="benefits_title">Преимущества работы с нами</h2>
 
-  		<ul class="benefits_list">
-  			<li class="benefits_list_guarantee">Гарантия<br /> по договору</li>
-  			<li class="benefits_list_experience">Стаж работы<br /> более 15 лет</li>
-  			<li class="benefits_list_fast">Оперативные<br /> сроки</li>
-  			<li class="benefits_list_free">Первая&nbsp;консультация<br /> бесплатно</li>
-  			<li class="benefits_list_instalment">Рассрочка<br /> оплаты</li>
-  		</ul>
+  		<div class="benefits_list">
+  			<div class="benefits_list_guarantee benefits_item">Гарантия<br /> по договору</div>
+  			<div class="benefits_list_experience benefits_item">Стаж работы<br /> более 15 лет</div>
+  			<div class="benefits_list_fast benefits_item">Оперативные<br /> сроки</div>
+  			<div class="benefits_list_free benefits_item">Первая&nbsp;консультация<br /> бесплатно</div>
+  			<div class="benefits_list_instalment benefits_item">Рассрочка<br /> оплаты</div>
+  		</div>
   	</section>
 
   	<footer class="footer">
@@ -504,7 +515,22 @@
   		</ul>
   	</footer>
 
+  	<a href="#phones" class="icon-phone" id="callUs">Позвонить</a>
+  	<a href="#contactForm" class="icon-mail" id="mailUs">Написать</a>
+  	<a href="#top" class="icon-top" id="goTop">^</a>
 
+  	<div class="popup_fon phones-fon" id="popupFon_phones"></div>
+  	<div class="popup phones" id="popup_phones">
+  		<h4>Выберите телефон:</h4>
+  		<ul>
+  			<li>
+  				<a href="tel:+7 (4872) 58-38-01">+7 (4872) 58-38-01</a>
+  			</li>
+  			<li>
+  				<a href="tel:+7 (953) 423-81-90">+7 (953) 423-81-90</a>
+  			</li>
+  		</ul>
+  	</div>
 
   	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
   	<script src="src/js/slick.min.js"></script>
@@ -536,6 +562,90 @@
 						      settings: {
 						        slidesToShow: 2
 						      }
+						    },
+						    {
+						      breakpoint: 470,
+						      settings: {
+						        slidesToShow: 1
+						      }
+						    }
+						  ]
+	      	});
+
+	      	$(".benefits_list").slick({
+			  	slidesToShow: 2,
+			  	slidesToScroll: 1,
+			  	infinite: false,
+			  	responsive: [
+						    {
+						      breakpoint: 6000,
+						      settings: "unslick"
+						    },
+						    {
+						      breakpoint: 768,
+						      settings: {
+						        slidesToShow: 3
+						      }
+						    },
+						    {
+						      breakpoint: 500,
+						      settings: {
+						        slidesToShow: 2
+						      }
+						    }
+						  ]
+	      	});
+
+	      	$(".articlefilters_list-1").slick({
+			  	slidesToShow: 2,
+			  	slidesToScroll: 1,
+			  	infinite: false,
+			  	responsive: [
+						    {
+						      breakpoint: 6000,
+						      settings: "unslick"
+						    },
+						    {
+						      breakpoint: 570,
+						      settings: {
+						        slidesToShow: 3
+						      }
+						    },
+						    {
+						      breakpoint: 400,
+						      settings: {
+						        slidesToShow: 2
+						      }
+						    }
+						  ]
+	      	});
+
+	      	$(".articlefilters_list-2_list").slick({
+			  	slidesToShow: 2,
+			  	slidesToScroll: 1,
+			  	infinite: false,
+			  	responsive: [
+						    {
+						      breakpoint: 6000,
+						      settings: "unslick"
+						    },
+						    {
+						      breakpoint: 600,
+						      settings: {
+						        slidesToShow: 4
+						      }
+						    },
+						    {
+						      breakpoint: 500,
+						      settings: {
+						        slidesToShow: 3
+						      }
+						    },
+						    {
+						      breakpoint: 400,
+						      settings: {
+						        slidesToShow: 2
+						      }
 						    }
 						  ]
 	      	});
@@ -546,11 +656,45 @@
 	      		$('#popup').remove();
 	      	});
 
+	      	$('#popupFon_phones, #popup_phones').on('click', function() {
+	      		$('#popupFon_phones').hide();
+	      		$('#popup_phones').hide();
+	      	});
+
+	      	//right nav icoms in mobile
+	      	$('#callUs').on('click', function() {
+	      		$('#popupFon_phones').show();
+	      		$('#popup_phones').show();
+	      	});
+
+	      	$('#mailUs').on('click', function() {
+	      		$('#contactForm .mainPageForm_fields, #contactForm .icon-toggle').each(function() {
+	      			$(this).toggleClass('active');
+	      		});
+	      	});
+
+	      	//toggle blocks in left nav on mobile
+	      	$('.icon-toggle').on('click', function() {
+	      		$(this).toggleClass('active')
+	      			   .parent().next('.content-toggle').toggleClass('active');
+	      	});
+
 	      	//form error 
 	      	$('#contactForm input, #contactForm textarea').on('input', function() {
 	      		if($(this).next('.error').text()) {
 	      			$(this).next('.error').empty();
 	      		}
+	      	});
+
+	      	//menu on mobile
+	      	$('#showMenu').on('click', function() {
+	      		$('.topnav').parents('.container').addClass('topnav-open');
+	      	});
+	      	$('#hideMenu, .topnav_list a').on('click', function() {
+	      		$('.topnav').parents('.container').removeClass('topnav-open');
+	      	});
+	      	$('.toggle-submenu').on('click', function() {
+	      		$(this).parents('.topnav-withSubmenu').toggleClass('submenu-open', 'fast');
 	      	});
 	    });
 	</script>
