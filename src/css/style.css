@@ -328,7 +328,7 @@ img {
   max-width: 100%;
   height: auto; }
 
-.news_title, .opinions_title, h1, .articlefilters_title, .portfolio_title,
+.news_title, .opinions_title, h1, .h1, .articlefilters_title, .portfolio_title,
 .portfolio_title-decorated, .mainPageForm_title, .workplan_title, .benefits_title, .phones.popup h4 {
   margin: 0;
   padding: 0;
@@ -1221,13 +1221,13 @@ img {
   padding: 0;
   font-size: 15px;
   color: #626262; }
-  .article h2 {
+  .article h2, .article .h2 {
     margin: 26px 0;
     padding: 0;
     color: #0194cf;
     font: 21px 'Times New Roman', serif;
     font-weight: normal; }
-  .article h3 {
+  .article h3, .article .h3 {
     padding: 0;
     margin: 0 0 23px;
     font-size: 18px;
@@ -1245,15 +1245,15 @@ img {
   .article td, .article th {
     font-size: 15px;
     color: #626262; }
-  .article ol {
+  .article .list-arrows {
     padding: 0;
     margin: 0;
     list-style: none; }
-    .article ol li {
+    .article .list-arrows li {
       margin: 0 0 23px;
       padding-left: 12px;
       position: relative; }
-      .article ol li:before {
+      .article .list-arrows li:before {
         content: '';
         display: block;
         width: 12px;
@@ -1261,7 +1261,19 @@ img {
         position: absolute;
         left: 0;
         background: url(../img/sprite-1.png) -10px -697px no-repeat; }
-    .article ol ul {
+      .article .list-arrows li ul li {
+        margin: 0;
+        padding-left: 12px;
+        position: relative; }
+        .article .list-arrows li ul li:before {
+          content: '•';
+          color: #0194cf;
+          display: block;
+          position: absolute;
+          left: 0;
+          font-weight: bold;
+          background: transparent; }
+    .article .list-arrows ul {
       margin: 23px 0 0 -12px; }
   .article ul {
     padding: 0;
@@ -1270,8 +1282,7 @@ img {
     .article ul li {
       margin: 0;
       padding-left: 12px;
-      position: relative;
-      font-style: italic; }
+      position: relative; }
       .article ul li:before {
         content: '•';
         color: #0194cf;
@@ -1280,6 +1291,46 @@ img {
         left: 0;
         font-weight: bold;
         background: transparent; }
+  .article ol {
+    padding: 0;
+    margin: 0;
+    counter-reset: ol;
+    list-style: none; }
+    .article ol li {
+      margin: 0 0 23px;
+      padding-left: 24px;
+      position: relative; }
+      .article ol li:before {
+        counter-increment: ol;
+        content: counter(ol) ".";
+        color: #0194cf;
+        display: block;
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+        background: transparent; }
+  .article table {
+    width: 100%;
+    margin: 0 0 23px;
+    border-collapse: collapse;
+    border-spacing: 0; }
+  .article th, .article td {
+    padding: 5px 10px;
+    text-align: left; }
+  .article th {
+    background: #1782ac;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.3em; }
+  .article td {
+    font-size: 15px;
+    line-height: 1.3em;
+    color: #626262; }
+  .article tr:hover td,
+  .article tr:nth-child(even):hover td {
+    background-color: #dbdada; }
+  .article tr:nth-child(even) td {
+    background-color: #f4f4f4; }
   .article .news_list li {
     padding: 12px 0 10px; }
     .article .news_list li:before {
@@ -1293,8 +1344,26 @@ img {
   .article .news_list .news_list_link a {
     font-style: normal;
     color: #656565; }
+  .article hr {
+    border: none;
+    height: 1px;
+    background: #e5e4e4; }
+  .article .danger, .article .primary, .article .blue, .article .basic, .article .gray, .article .warning, .article .yellow, .article .green, .article .red {
+    margin: 0;
+    padding: 15px;
+    color: #ffffff;
+    background-color: #eba5a3; }
+  .article .primary, .article .blue {
+    background-color: #1782ac; }
+  .article .basic, .article .gray {
+    background-color: #f4f4f4;
+    color: #626262; }
+  .article .warning, .article .yellow {
+    background-color: #f0ad4e; }
+  .article .green {
+    background-color: #a3d7a3; }
 
-h1 {
+h1, .h1 {
   margin: 24px 0 30px;
   padding: 0 0 10px;
   font-size: 30px;
