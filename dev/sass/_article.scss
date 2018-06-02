@@ -188,6 +188,11 @@
 			background: #e5e4e4;
 		}
 
+		img {
+			max-width: 100% !important;
+			height: auto !important;
+		}
+
 		.danger, .red {
 			margin: 0;
 			padding: 15px;
@@ -264,6 +269,7 @@
 
 @import 'breadcrumbs';
 @import 'articlefilters';
+@import 'catalog';
 @import 'portfolio';
 
 @media all and ($tablet) {

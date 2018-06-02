@@ -1348,6 +1348,9 @@ img {
     border: none;
     height: 1px;
     background: #e5e4e4; }
+  .article img {
+    max-width: 100% !important;
+    height: auto !important; }
   .article .danger, .article .primary, .article .blue, .article .basic, .article .gray, .article .warning, .article .yellow, .article .green, .article .red {
     margin: 0;
     padding: 15px;
@@ -1594,6 +1597,50 @@ h1, .h1 {
   .articlefilters_line-v1, .articlefilters_line-v2, .articlefilters_line-v3, .articlefilters_line-v4,
   .articlefilters_line-g {
     display: none; } }
+
+.catalog {
+  margin: 0 0 20px;
+  padding: 0;
+  text-align: center;
+  line-height: 0; }
+  .catalog_item {
+    display: inline-block;
+    margin: 0 0 10px;
+    width: 24%;
+    min-width: 150px;
+    height: 260px;
+    line-height: 18px;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #2d2d2d;
+    transition: opacity .3s; }
+    .catalog_item:hover {
+      opacity: 0.65; }
+  .catalog_image {
+    display: block;
+    margin: 0 auto 16px;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%; }
+  .catalog_title {
+    display: block;
+    margin: 0 10px 16px;
+    font: 19px 'Times New Roman',serif;
+    font-weight: bold;
+    line-height: 1.3em;
+    color: #2d2d2d; }
+  .catalog_link {
+    display: block;
+    margin: 0 10px;
+    font-size: 14px;
+    line-height: 1.3em;
+    text-decoration: underline;
+    color: #2d2d2d; }
 
 .portfolio_title,
 .portfolio_title-decorated {
